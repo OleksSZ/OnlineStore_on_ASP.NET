@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Store</title>
+<style>
+:root{--bg:#0f1115;--card:#181b22;--line:#2a2f3a;--text:#e6e8ee;--mut:#8b93a7;--acc:#4f8cff;--ok:#3ecf8e;--bad:#ff5d6c}
+*{box-sizing:border-box}
+body{margin:0;font:14px system-ui,sans-serif;background:var(--bg);color:var(--text)}
+header{display:flex;align-items:center;gap:6px;padding:12px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+header b{margin-right:16px}
+main{max-width:1050px;margin:20px auto;padding:0 16px}
+h2{font-size:15px;color:var(--mut);margin:24px 0 10px}
+button{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit}
+button.sm{padding:4px 10px;font-size:12px;margin-right:4px}
+button.bad{background:var(--bad)}
+nav button{background:none;color:var(--mut)}
+nav button.on{background:var(--card);color:var(--text)}
+input,select{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit}
+form.row{display:flex;gap:8px;flex-wrap:wrap}
+form.inline{display:inline-flex;margin-right:6px}
+.line{display:flex;gap:8px;margin:6px 0}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:8px;overflow:hidden}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:500;font-size:12px}
+.mut{color:var(--mut)}
+.tag{padding:2px 8px;border-radius:10px;font-size:12px;background:#4f8cff22;color:var(--acc)}
+.tag.Delivered,.tag.Completed{background:#3ecf8e22;color:var(--ok)}
+.tag.Cancelled{background:#ff5d6c22;color:var(--bad)}
+#toast{position:fixed;bottom:20px;right:20px;padding:10px 16px;border-radius:8px;background:var(--ok);color:#000;display:none}
+#toast.err{background:var(--bad);color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <b>🛒 Online Store</b>
+  <nav>
+    <button data-act="tab" data-id="orders">Замовлення</button>
+    <button data-act="tab" data-id="routes">Маршрути</button>
+    <button data-act="tab" data-id="customers">Клієнти</button>
+    <button data-act="tab" data-id="products">Товари</button>
+    <button data-act="tab" data-id="couriers">Кур'єри</button>
+  </nav>
+</header>
+<main id="view"></main>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
