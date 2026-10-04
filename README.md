@@ -20,7 +20,7 @@ docker compose up -d --build
 ```
 
 Документація API (Scalar): http://localhost:8080/scalar/v1
-
+Сам міні-сайт http://localhost:8080/
 ## Локальна розробка
 
 ```bash
